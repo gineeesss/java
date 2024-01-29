@@ -10,8 +10,8 @@ public class Coche extends Vehiculo{
         this.numeroPuertas = numeroPuertas;
     }
     public float calcularAlquiler(int dias){
-        float alquiler = 0;
-        return alquiler;
+        if (numeroPuertas==3) return 60*dias;
+        else return 70*dias;
     }
 
     @Override
@@ -19,8 +19,5 @@ public class Coche extends Vehiculo{
         return "Coche{" + super.toString() +
                 "numeroPuertas=" + numeroPuertas +
                 "} " ;
-    }
-    public int getNumeroPuertas() {
-        return numeroPuertas;
     }
 }

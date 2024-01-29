@@ -10,7 +10,6 @@ public class CocheAltaGama  extends Coche{
         super(marca,modelo,anioFabricacion,numeroPuertas);
     }
     public float calcularAlquiler(int dias){
-        float alquiler = 1;
-        return alquiler;
+        return (super.calcularAlquiler(dias) + (25*dias));
     }
 }

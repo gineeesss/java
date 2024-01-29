@@ -13,8 +13,9 @@ public class Moto  extends Vehiculo{
         System.out.println("miau");
     }
     public float calcularAlquiler(int dias){
-        float alquiler = 1;
-        return alquiler;
+        if(cilindrada>500)
+            return (50*dias);
+        else return (75*dias);
     }
 
     @Override
