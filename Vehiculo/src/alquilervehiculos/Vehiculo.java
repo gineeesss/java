@@ -1,10 +1,10 @@
 package alquilervehiculos;
 
-public class Vehiculo {
+public abstract class  Vehiculo {
     //PROPIEDADES
-    private String marca;
-    private String modelo;
-    private int anioFabricacion;
+    private final String marca;
+    private final String modelo;
+    private final int anioFabricacion;
     static private float ingresoAlguiler;
     //METHODS
 
@@ -13,9 +13,9 @@ public class Vehiculo {
         this.modelo = modelo;
         this.anioFabricacion = anioFabricacion;
     }
-    public void acelarar(){
-        System.out.println("acelerar");
-    }
+
+    public abstract float calcularAlquiler(int dias);
+
     @Override
     public String toString() {
         return "Vehiculo{" +
