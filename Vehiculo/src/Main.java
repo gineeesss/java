@@ -23,7 +23,7 @@ public class Main {
         do {
             menu();
             option = scr.nextInt();
-            if (option >= 1 & option <=5){
+            if (option >= 1 & option <5){
                 i = option - 1;//primera dimesión (categoria vehículo)
                 System.out.println("¿Cuál desea alquilar? [1][2]");
                 System.out.println((cochera[i][0]).toString());
