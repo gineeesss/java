@@ -21,7 +21,8 @@ public class Televisor extends Producto{
     }
 
     public float calcularDescuento(){
-        return super.getPrecio()*this.DESCUENTO/100;
+        return (super.getPrecio()-(super.getPrecio()*this.DESCUENTO)/100);
+
     }
     public void cambiarCanal(String canal) {
         System.out.println("Cambiando al canal "+canal);

@@ -32,10 +32,6 @@ public abstract class Producto {
 
 
 
-
-
-
-
     //GETTERS
 
     public String getMarca() {

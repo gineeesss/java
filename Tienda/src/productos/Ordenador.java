@@ -29,7 +29,7 @@ public class Ordenador extends Producto{
     }
 
     public float calcularDescuento(){
-        return super.getPrecio()*this.DESCUENTO/100;
+        return (super.getPrecio()-(super.getPrecio()*this.DESCUENTO)/100);
     }
     public void ampliarRam(int aumento){
         if(aumento> 0 & aumento <128){

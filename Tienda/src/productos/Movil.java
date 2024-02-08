@@ -27,7 +27,7 @@ public class Movil extends Producto{
                 "} " + super.toString();
     }
     public float calcularDescuento(){
-        return super.getPrecio()*this.DESCUENTO/100;
+        return (super.getPrecio()-(super.getPrecio()*this.DESCUENTO)/100);
     }
     public void llamar(String numero){
         System.out.printf("Llamando al %s...",numero);
