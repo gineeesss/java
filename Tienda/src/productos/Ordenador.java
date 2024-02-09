@@ -19,14 +19,7 @@ public class Ordenador extends Producto{
     }
 
     @Override
-    public String toString() {
-        return "Ordenador{" +
-                "procesador='" + procesador + '\'' +
-                ", ram=" + ram +
-                ", hdd=" + hdd +
-                ", DESCUENTO=" + DESCUENTO +
-                "} " + super.toString();
-    }
+    public String toString() {return "[Odenador] "+super.toString()+" Procesador: "+procesador+" RAM: "+ram+"HDD: "+hdd+" Descuento: "+DESCUENTO+"%";}
 
     public float calcularDescuento(){
         return (super.getPrecio()-(super.getPrecio()*this.DESCUENTO)/100);

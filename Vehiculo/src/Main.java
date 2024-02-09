@@ -45,13 +45,13 @@ public class Main {
         }
 
     public static void menu(){
-        System.out.println("MENU ______________________________________________");
-        System.out.println("[1] Alquilar Coche");
-        System.out.println("[2] Alquilar Moto");
-        System.out.println("[3] Alquilar Bicicleta");
-        System.out.println("[4] Alquilar Coche Alta Gama");
-        System.out.println("[5] Calcular Ingreso total alquiler para la empresa");
-        System.out.println("[0] Salir");
-        System.out.println("___________________________________________________");
+        System.out.println("|MENU _______________________________________________");
+        System.out.println("|[1] Alquilar Coche                                 |");
+        System.out.println("|[2] Alquilar Moto                                  |");
+        System.out.println("|[3] Alquilar Bicicleta                             |");
+        System.out.println("|[4] Alquilar Coche Alta Gama                       |");
+        System.out.println("|[5] Calcular Ingreso total alquiler para la empresa|");
+        System.out.println("|[0] Salir                                          |");
+        System.out.println("|___________________________________________________|");
     }
 }

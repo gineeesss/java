@@ -17,11 +17,7 @@ public abstract class Producto {
 
     @Override
     public String toString() {
-        return "Producto{" +
-                "marca='" + marca + '\'' +
-                ", modelo='" + modelo + '\'' +
-                ", precio=" + precio +
-                '}';
+        return "Marca: "+marca+" Modelo: "+ modelo+ " Precio"+precio ;
     }
 
     public static int getInventario() {

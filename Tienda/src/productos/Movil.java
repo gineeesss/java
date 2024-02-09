@@ -18,16 +18,9 @@ public class Movil extends Producto{
         }
 
     @Override
-    public String toString() {
-        return "Movil{" +
-                "procesador='" + procesador + '\'' +
-                ", ram=" + ram +
-                ", pulgadas=" + pulgadas +
-                ", DESCUENTO=" + DESCUENTO +
-                "} " + super.toString();
-    }
+    public String toString() {return "[Movil] "+super.toString()+" Procesador: "+procesador+" RAM: "+ram+"Pulgadas: "+pulgadas+" Descuento: "+DESCUENTO+"%";}
     public float calcularDescuento(){
-        return (super.getPrecio()-(super.getPrecio()*this.DESCUENTO)/100);
+        return ((getPrecio()*this.DESCUENTO)/100);
     }
     public void llamar(String numero){
         System.out.printf("Llamando al %s...",numero);
