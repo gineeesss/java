@@ -1,16 +1,16 @@
 package electrodoesticos;
 
-public class Electrodomestico {
+public abstract class Electrodomestico {
 
     //PROPERTIES
     public enum Color{blanco,negro,rojo,azul,gris}
-    private String marca;
+    private final String marca;
     private float precio;
-    private float peso;
-    private char consumoEnergetico;
-    private Color color;
+    private final int peso;
+    private final char consumoEnergetico;
+    private final Color color;
 
-    public Electrodomestico(String marca, float precio,float peso, char consumoEnergetico, Color color) {
+    public Electrodomestico(String marca, float precio,int peso, char consumoEnergetico, Color color) {
         this.marca = marca;
         this.precio = precio;
         this.peso = peso;
@@ -18,15 +18,25 @@ public class Electrodomestico {
         this.color = color;
     }
 
+    public  float getPrecio() {
+        return precio;
+    }
+    public String getMarca(){
+        return marca;
+    }
+
+    public void setPrecio(float precio) {
+        this.precio = precio;
+    }
+
     @Override
     public String toString() {
-        return "Electrodomestico{" +
-                "marca='" + marca + '\'' +
-                ", precio=" + precio +
-                ", consumoEnergetico=" + consumoEnergetico +
-                ", color=" + color +
-                '}';
+        return "marca: " + marca + "| precio: " + precio +
+                "| peso: " + peso +
+                "| consumoEnergetico: " + consumoEnergetico +
+                "| color: " + color ;
     }
+
     public char comprobarConsumoEnergetico(char consumo){
         if (Character.toUpperCase(consumo) >= 'A' && Character.toUpperCase(consumo) <='F'){
             return Character.toUpperCase(consumo);
@@ -51,7 +61,15 @@ public class Electrodomestico {
                     this.precio += 10;
                     break;
             }
-            if (this.peso <=19)
+            if (this.peso > 0){ //control por si hay algún peso puesto en negativo, no se calcule el prcio
+                if (this.peso < 19){
+                    this.precio +=10;
+                } else if (this.peso >=20 && this.peso <50) {
+                    this.precio +=50;
+                } else if (this.peso >=50 && this.peso <80) {
+                    this.precio +=80;
+                } else this.precio +=100;
+            }
         }
     }
 }
