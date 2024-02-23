@@ -23,6 +23,7 @@ public class Main {
 
         System.out.println("\nINSTALANDO NETFLIX");
         instalarNetflix(gestion);
+        precioTotal(gestion);
     }
 
 
@@ -30,6 +31,16 @@ public class Main {
         for (Electrodomestico a: gestion) {
             if(a instanceof Television) ((Television) a).instalarNetflix();
         }
+    }
+    public static void precioTotal(Electrodomestico[] gestion){
+        int precioTotalLavadores = 0;
+        int precioTotalTelevisiones = 0;
+        for (Electrodomestico a: gestion){
+            if(a instanceof Television)  precioTotalTelevisiones += a.getPrecio();
+            if(a instanceof Lavadora)  precioTotalLavadores += a.getPrecio();
+        }
+        System.out.println("Precio total de Lavadoras: "+precioTotalLavadores);
+        System.out.println("Precio total de Televisiones: "+precioTotalTelevisiones);
     }
     public static void electrodomesticosMasCaros(Electrodomestico[] gestion){
         int lavadoraMasCara = 0;

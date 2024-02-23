@@ -38,10 +38,17 @@ public abstract class Electrodomestico {
     }
 
     public char comprobarConsumoEnergetico(char consumo){
+       switch (consumo){
+           case 'A','a','B','b','C','c','D','d','F','f': consumo = Character.toUpperCase(consumo);break;
+           default: consumo = 'F';
+       }
+        //dos maneras distintas
         if (Character.toUpperCase(consumo) >= 'A' && Character.toUpperCase(consumo) <='F'){
             return Character.toUpperCase(consumo);
         } else return 'F';
+
     }
+
     public void precioFinal(){
         if(this.peso >=10){
             switch (this.consumoEnergetico){
