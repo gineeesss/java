@@ -15,6 +15,13 @@ public abstract class CuentaRemunerada extends Cuenta{
         this.interes = interes;
     }
 
+    @Override
+    public String toString() {
+        return super.toString()+ "CuentaRemunerada{" +
+                "interes=" + interes +
+                '}';
+    }
+
     public void aplicarIntereses(){
         setSaldo(getSaldo()+(getSaldo()*interes));
     }

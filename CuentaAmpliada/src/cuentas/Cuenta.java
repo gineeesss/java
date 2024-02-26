@@ -28,7 +28,7 @@ public abstract class Cuenta {
         return saldo;
     }
 
-    protected void setSaldo(float saldo) {
+    public void setSaldo(float saldo) {
         this.saldo = saldo;
     }
 
@@ -53,5 +53,13 @@ public abstract class Cuenta {
         if (this.saldo < 0){
             System.out.println("La cuenta "+ this.identificador + " es MOROSA.");
         } else System.out.println("La cuenta "+this.identificador + " NO es morosa.");
+    }
+
+    @Override
+    public String toString() {
+        return "Cuenta{" +
+                "identificador=" + identificador +
+                ", saldo=" + saldo +
+                '}';
     }
 }

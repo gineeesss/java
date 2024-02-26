@@ -37,7 +37,6 @@ public class PlanetCorreccion {
         }
     }
 
-
     public double calcularDensidad(){
         return this.masa/this.volumen;
     }

@@ -7,7 +7,6 @@ public final class CuentaCorriente extends Cuenta{
 
     //METHODS
 
-
     public CuentaCorriente(int identificador, float saldo, float[] recibos, String titular) {
         super(identificador, saldo);
         this.recibos = recibos;
@@ -15,9 +14,9 @@ public final class CuentaCorriente extends Cuenta{
     }
 
     public CuentaCorriente(int identificador, float[] recibos, String titular) {
-        super(identificador);
-        this.recibos = recibos;
-        this.titular = titular;
+            super(identificador);
+            this.recibos = recibos;
+            this.titular = titular;
     }
 
     //METHODS
