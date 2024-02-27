@@ -5,7 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ff5c1e66-5861-4712-8f66-5e844ba90221" name="Changes" comment="">
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/../GutierrezSaura_Gines/Ejercicio3/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../GutierrezSaura_Gines/Ejercicio3/src/Main.java" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cuentas/Cuenta.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cuentas/Cuenta.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cuentas/CuentaCorriente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cuentas/CuentaCorriente.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cuentas/CuentaEmpresa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cuentas/CuentaEmpresa.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cuentas/CuentaRemunerada.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cuentas/CuentaRemunerada.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EjemArray1/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../EjemArray1/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Gestion/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Gestion/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Planeta/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Planeta/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Planeta/src/planeta/PlanetCorreccion.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Planeta/src/planeta/PlanetCorreccion.java" afterDir="false" />
+>>>>>>> e449740282e5e1cceecac41b1d5a5d541dee97c5
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,11 +44,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
+<<<<<<< HEAD
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;
+=======
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "C:/Users/gigin/Desktop/java/EjemArray1"
+>>>>>>> e449740282e5e1cceecac41b1d5a5d541dee97c5
   }
 }</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />

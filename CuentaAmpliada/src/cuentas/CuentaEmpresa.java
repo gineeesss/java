@@ -10,6 +10,11 @@ public class CuentaEmpresa extends CuentaRemunerada{
     }
 
     @Override
+    public String toString() {
+        return super.toString() +"CuentaEmpresa{}";
+    }
+
+    @Override
     public void aplicarIntereses() {
         super.aplicarIntereses();
         setSaldo(getSaldo()-(getSaldo()*0.05f));
