@@ -15,19 +15,21 @@ public class Main {
         int filaMayor = 0;
         int posicionFila = 0;
         int posicionFilaMasGrande = 0;
-         for (int[] a:numeros){
-             int propuestaMayor = 0;
-             for (int cifra :a) {
-                 propuestaMayor +=cifra;
-                 System.out.println(cifra);
-             }
-             System.out.println(" ");
-             if (propuestaMayor > filaMayor){
-                 posicionFilaMasGrande = posicionFila;
-                 filaMayor=propuestaMayor;
-             }
-             posicionFila++;
-         }
+        for (int[] a:numeros){
+            int propuestaMayor = 0;
+            for (int cifra :a) {
+                propuestaMayor +=cifra;
+                System.out.print("\t"+cifra);
+            }
+            System.out.print("\t Suma: "+propuestaMayor);
+
+            System.out.println(" ");
+            if (propuestaMayor > filaMayor){
+                posicionFilaMasGrande = posicionFila;
+                filaMayor=propuestaMayor;
+            }
+            posicionFila++;
+        }
         System.out.println("La fila con mayor suma es la fila "+posicionFilaMasGrande+" y la suma vale: "+filaMayor);
 
 
