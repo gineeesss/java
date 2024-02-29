@@ -39,22 +39,20 @@ public class Main {
         if (buscarPersona(insti,dni)==-1){
             System.out.println("[1] Crear Profesor \n[2] Crear Estudiante");
             int crear=scr.nextInt();
+            System.out.println("Introducir Nombre: ");
+            String nombre = scr.next();
             if (crear==1){
-                System.out.println("Introducir Nombre: ");
-                String nombre = scr.next();
                 System.out.println("Introducir Espeialidad: ");
                 String especialidad = scr.next();
                 insti[Persona.getTotalPersonas()]=new Profesor(nombre,dni,especialidad);
             } else if (crear==2) {
-                System.out.println("Introducir Nombre: ");
-                String nombre = scr.next();
                 System.out.println("Introducir Etapa: ");
                 String etapa = scr.next();
                 insti[Persona.getTotalPersonas()]=new Estudiante(nombre,dni,etapa);
             }
         }else System.out.println("Esta persona ya existe en el regstro");
     }
-    public static int buscarPersona(Persona[] insti, String dni){
+    private static int buscarPersona(Persona[] insti, String dni){
         for (int i=0; i<Persona.getTotalPersonas();i++){
             if (dni.equals(insti[i].getDni())){
                 return i ;
