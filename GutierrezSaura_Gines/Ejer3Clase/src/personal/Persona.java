@@ -13,12 +13,7 @@ public abstract class Persona {
         totalPersonas++;
     }
 
-    public String mostrarDatos() {
-        return "Persona{" +
-                "nombre='" + nombre + '\'' +
-                ", dni='" + dni + '\'' +
-                '}';
-    }
+    public abstract void mostrarDatos();
     public String getNombre() {
         return nombre;
     }

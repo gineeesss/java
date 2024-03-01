@@ -11,10 +11,10 @@ public class Profesor extends Persona{
         totalProfesores++;
     }
 
-    public String mostrarDatos() {
-        return "Profesor{" +
+    public void mostrarDatos() {
+        System.out.println("Profesor{" +
                 "Profesor='" + especialidad + '\'' +
-                "} " + super.mostrarDatos();
+                 "dni: "+ this.getDni()+"especialidad: "+this.especialidad+"} " );
     }
 
     public static int getTotalProfesores() {

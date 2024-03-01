@@ -54,7 +54,7 @@ public class Main {
     }
     private static int buscarPersona(Persona[] insti, String dni){
         for (int i=0; i<Persona.getTotalPersonas();i++){
-            if (dni.equals(insti[i].getDni())){
+            if (dni.equalsIgnoreCase(insti[i].getDni())){
                 return i ;
             }
         }return -1;
@@ -76,7 +76,7 @@ public class Main {
         String dni = scr.next();
         int existe = buscarPersona(insti,dni);// guarda la posicion en el array del dni, sino guarda -1, significa que no existe
         if (existe!=-1){
-            System.out.println(insti[existe].mostrarDatos());
+            insti[existe].mostrarDatos();
         }else System.out.println("La persona con el dni: "+dni+" no existe en el sistema");
     }
     public static void menu(){

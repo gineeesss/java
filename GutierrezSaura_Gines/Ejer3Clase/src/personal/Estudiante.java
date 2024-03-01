@@ -13,11 +13,12 @@ public class Estudiante extends Persona{
         totalEstudiantes++;
     }
 
-    public String mostrarDatos() {
-        return "Estudiaante{" +
+    public void mostrarDatos() {
+        System.out.println("Estudiaante{" +
+                "dni: "+this.getDni()+"nombre: "+this.getNombre()+
                 "etapa='" + etapa + '\'' +
                 ", asignatura='" + asignatura + '\'' +
-                "} " + super.mostrarDatos();
+                "} " );
     }
 
     public void matricular(String asignatura) {
