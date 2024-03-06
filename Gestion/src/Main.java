@@ -1,5 +1,7 @@
 import electrodoesticos.*;
 
+import java.util.Arrays;
+
 public class Main {
     public static void main(String[] args) {
         Electrodomestico[] gestion = new Electrodomestico[6];
@@ -9,6 +11,7 @@ public class Main {
         gestion[3] = new Television("SmartTV pequeña",10,31,'L', Electrodomestico.Color.negro,22,true);
         gestion[4] = new Television("Normal",10,31,'c', Electrodomestico.Color.gris,44,false);
         gestion[5] = new Television("Cara",10,31,'a', Electrodomestico.Color.gris,44,true);
+
 
         System.out.println("MOSTRANDO TODOS LOS ELECTRODOMESTICOS");
         electrodomesticosMostrar(gestion);
@@ -24,6 +27,11 @@ public class Main {
         System.out.println("\nINSTALANDO NETFLIX");
         instalarNetflix(gestion);
         precioTotal(gestion);
+        Arrays.sort(gestion);
+        for (Electrodomestico a : gestion){
+            System.out.println(a);
+            System.out.println();
+        }
     }
 
 

@@ -1,6 +1,6 @@
 package electrodoesticos;
 
-public abstract class Electrodomestico {
+public abstract class Electrodomestico implements Comparable{
 
     //PROPERTIES
     public enum Color{blanco,negro,rojo,azul,gris}
@@ -78,5 +78,12 @@ public abstract class Electrodomestico {
                 } else this.precio +=100;
             }
         }
+    }
+
+    @Override
+    public int compareTo(Object otro) {//tiene que ser objeto, porque sino romperias la firma
+        if (this.precio< ((Electrodomestico) otro).precio) return -1;
+        else if (this.precio> ((Electrodomestico) otro).precio) return +1;
+        else return -1;
     }
 }

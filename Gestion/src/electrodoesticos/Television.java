@@ -5,6 +5,7 @@ public class Television extends Electrodomestico {
     private int tamanio;
     private boolean smartTV;
 
+
     public Television(String marca, float precio, int peso, char consumoEnergetico, Color color, int tamanio, boolean smartTV) {
         super(marca, precio, peso, consumoEnergetico, color);
         this.tamanio = tamanio;
