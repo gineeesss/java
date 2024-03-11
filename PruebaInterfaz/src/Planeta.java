@@ -1,4 +1,4 @@
-public class Planeta implements Parabolico, Cohete{
+public class Planeta implements Parabolico, Cohete, Tierra{
     private double masa, radio;
     public Planeta(double velocidad, double angulo) {
         this.masa = masa;
@@ -18,4 +18,6 @@ public class Planeta implements Parabolico, Cohete{
     public double velocidad() {
         return Math.sqrt(2*Tierra.g*this.masa/this.radio);
     }
+
+
 }

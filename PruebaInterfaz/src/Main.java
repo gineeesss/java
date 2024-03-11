@@ -7,6 +7,8 @@ public class Main {
         System.out.println("La fuerza es: " + objeto1.velocidad());
         System.out.println("La fuerza 2 es: "+ objeto2.fuerza());
         System.out.println("La velociad 2 es: "+((Planeta) objeto2).velocidad());
+        System.out.println(objeto2.metodoConCodigo());
+        System.out.println(objeto1.metodoConCodigo());
     }
 
 }
