@@ -7,6 +7,7 @@ public class Main {
         List<Integer> numeros = new ArrayList<>(3);
         ArrayList<Integer> cosita = new ArrayList<>();
         ArrayList<Integer> numerosOrdenados;
+        Iterator<Integer> iterador;
         int opcion;
         do{
             menu();
@@ -46,9 +47,15 @@ public class Main {
                     break;
                 case 7:
                     int borrar = scr.nextInt();
-                    Iterator<Integer> iterador = numeros.iterator();
+                    iterador = numeros.iterator();
                     while(iterador.hasNext()){
-                        if(iterador.next()==borrar) iterador.remove();
+                        if(iterador.next().intValue()==borrar) iterador.remove();
+                    }
+                    break;
+                case 8:
+                    iterador = numeros.iterator();
+                    while(iterador.hasNext()){
+                        if (iterador.next()%2==0) iterador.remove();
                     }
                     break;
                 case 9:
@@ -71,16 +78,17 @@ public class Main {
                 "\n[5] Mostrar la serie de números pero sin que haya números repetidos" +
                 "\n[6] Quitar un número de la lista indicando la posición" +
                 "\n[7] Quitar un número de la lista indicando el número" +
+                "\n[8] Quitar los números pares" +
                 "\n[9] Sumar todos los elementos");
     }
     public static void mostrarLista(Collection<Integer> numeros){
-        System.out.println("Lista Original: ");
+        System.out.println("Lista : ");
         for (Integer a: numeros) {
             System.out.print(a+" ");
         }
     }
     public static <T> void mostrarColeccion(Collection<T> numeros){
-        System.out.println("Lista Original: ");
+        System.out.println("Colección: ");
         for (T a: numeros) {
             System.out.print(a+" ");
         }
@@ -94,11 +102,9 @@ public class Main {
     }
 }
 
+// comparar y ordenar
 
 
-/*
 
 
 
-    Quitar los números pares
-    Suma todos los números de la lista*/
