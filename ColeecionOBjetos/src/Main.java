@@ -2,6 +2,7 @@ import Paquete.Alumno;
 import Paquete.Notas;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Scanner;
 
@@ -12,7 +13,6 @@ public class Main {
         String nombre;
         int opcion;
         int indice;
-        float notamedia;
         String modulo;
         do{
             menu();
@@ -65,7 +65,36 @@ public class Main {
                 }
                 System.out.println("La nota media del Módulo: "+modulo+" es: "+sumatorio/alumnosNum);
                 break;
-
+            case 5:
+                System.out.println("Nombre del alumno a borrar: ");
+                clase.remove(buscarAlumno(clase,scr.next()));
+                System.out.println("Se ha eliminado el alumno");
+                break;
+            /*case 6:
+                System.out.println("Nombre del alumno a borrar: ");
+                buscarAlumno(clase,scr.next());
+                //indice = buscarAlumno(clase,scr.next());
+                //Alumno persona = clase.get(indice);
+                if (buscarNota(clase.get(buscarAlumno(clase,scr.next())).getNota() , scr.next()) != null){
+                   // buscarNota(clase.get(buscarAlumno(clase,scr.next())).getNota().remove();
+                }
+                break;*/
+            case 6:
+                System.out.println("Nombre Alumno");
+                indice = buscarAlumno(clase, scr.next());
+                if (indice==-1) System.out.println("no existe");
+                else {
+                    System.out.println("Modulo: ");
+                    modulo=scr.next();
+                    /*for (Notas j:clase.get(indice).getNota()){
+                        if (j.getModulo().equalsIgnoreCase(modulo)) clase.get(indice).getNota().remove(j);
+                    }*/
+                    Iterator<Notas> iterador = clase.get(indice).getNota().iterator();
+                    while (iterador.hasNext()){
+                        if (iterador.next().getModulo().equalsIgnoreCase(modulo)) iterador.remove();
+                    }
+                }
+                break;
         }
         }while (opcion!=0);
         System.out.println("Programa Finalizado");
@@ -76,6 +105,8 @@ public class Main {
                    [2] Mostrar notas de un Alumno
                    [3] Mostrar nota media de un Alumno
                    [4] Calcular la nota media de un Módulo
+                   [5] Eliminar a un Alumno a partir de su nombre
+                   [6] Eliminar nota(objeto) de un Alumno
                    [0] Salir del Programa
                 """);
     }
@@ -84,5 +115,11 @@ public class Main {
             if (a.getNombre().equalsIgnoreCase(nombre)) return clase.indexOf(a);
         }
         return -1;
+    }
+    private static Notas buscarNota(List<Notas> notas, String modulo){
+        for (Notas a: notas) {
+            if (a.getModulo().equalsIgnoreCase(modulo)) return a;
+        }
+        return null;
     }
 }

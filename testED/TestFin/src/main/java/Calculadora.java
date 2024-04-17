@@ -43,7 +43,6 @@ public class Calculadora {
 
         Pila() {
         }
-
         public void push(double valor) {
             this.pila[++this.pico] = valor;
         }
