@@ -1,6 +1,6 @@
 public class Alumno implements Comparable<Alumno>{
-    String nombre;
-    int edad;
+    private String nombre;
+    private Integer edad;
 
     public Alumno(String nombre, int edad) {
         this.nombre = nombre;
@@ -14,10 +14,27 @@ public class Alumno implements Comparable<Alumno>{
     }
 
 
-    @Override
+    /*@Override
     public int compareTo(Alumno o) {
         if (this.edad > o.edad) return 1;
         else if (this.edad < o.edad) return -1;
         else return 0;
+    }*/
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public Integer getEdad() {
+        return edad;
+    }
+
+    @Override
+    public int compareTo(Alumno o) {
+        if (this.nombre.length() > o.nombre.length()){
+            return -1;
+        } else if (this.nombre.length() < o.nombre.length()) {
+            return 1;
+        }else return 0;
     }
 }

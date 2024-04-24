@@ -1,10 +1,10 @@
 package garaje;
 
-public class Coche implements Comparable{
+public class Coche implements Comparable<Coche>{
     private final String matricula;
     private final String marca;
     private final String modelo;
-    private final int kilometraje;
+    private final Integer kilometraje;
 
     public Coche(String matricula, String marca, String modelo, int kilometraje) {
         this.matricula = matricula;
@@ -15,8 +15,7 @@ public class Coche implements Comparable{
 
     @Override
     public String toString() {
-        return "Coche{" +
-                "matricula='" + matricula + '\'' +
+        return "\nmatricula='" + matricula + '\'' +
                 ", marca='" + marca + '\'' +
                 ", modelo='" + modelo + '\'' +
                 ", kilometraje='" + kilometraje + '\'' +
@@ -34,12 +33,11 @@ public class Coche implements Comparable{
         return kilometraje;
     }
 
-    public int compareTo(Object o) {
-        Coche miau = (Coche) o;
-        if (this.kilometraje < miau.kilometraje) return -1;
-        else if (this.kilometraje> miau.kilometraje)return 1;
-        else return 0;
-
+    public int compareTo(Coche o) {
+        /*if (this.kilometraje < o.kilometraje) return -1;
+        else if (this.kilometraje> o.kilometraje)return 1;
+        else return 0;*/
+        return this.kilometraje.compareTo(o.getKilometraje());
     }
 }
 
