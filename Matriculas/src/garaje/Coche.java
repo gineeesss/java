@@ -15,11 +15,10 @@ public class Coche implements Comparable<Coche>{
 
     @Override
     public String toString() {
-        return "\nmatricula='" + matricula + '\'' +
+        return "matricula='" + matricula + '\'' +
                 ", marca='" + marca + '\'' +
                 ", modelo='" + modelo + '\'' +
-                ", kilometraje='" + kilometraje + '\'' +
-                '}';
+                ", kilometraje='" + kilometraje+"\n";
     }
 
     public String   getMarca() {
@@ -37,7 +36,7 @@ public class Coche implements Comparable<Coche>{
         /*if (this.kilometraje < o.kilometraje) return -1;
         else if (this.kilometraje> o.kilometraje)return 1;
         else return 0;*/
-        return this.kilometraje.compareTo(o.getKilometraje());
+        return this.kilometraje.compareTo(-o.getKilometraje());
     }
 }
 

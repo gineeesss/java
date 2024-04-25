@@ -18,34 +18,45 @@ public class Main {
                 addCoches();
                 break;
             case 2:
-                for (Coche a: empresa){
-                    System.out.println(a);
-                }
+                System.out.println("Introducir matrícula");
+                int indice = (extraerMatricula(scr.next()));
+                if (indice!=-1){
+                    empresa.remove(indice);
+                    System.out.println("Eliminado correctamente");
+                }else System.out.println("No se encuentra la matrícula");
                 break;
             case 3:
+                /*for (Coche a: empresa){
+                    System.out.println(a);
+                }*/
+                System.out.println(empresa);
+                break;
+            case 4:
                 String marcaBuscar = scr.next();
                 for (Coche a: empresa){
                     if (a.getMarca().equalsIgnoreCase(marcaBuscar)) System.out.println(a);
                 }
                 break;
-            case 4:
+            case 5:
                 int menosKmBuscar = scr.nextInt();
                 for (Coche a: empresa){
                     if (a.getKilometraje()<menosKmBuscar) System.out.println(a);
                 }
                 break;
-            case 5:
-                int masKm=0,indiceMasKm=-1;
+            case 6:
+                /*int masKm=0,indiceMasKm=-1;
                 for (Coche a: empresa) {
                     if (a.getKilometraje()>=masKm) {
                         masKm = a.getKilometraje();
                         indiceMasKm=empresa.indexOf(a);
                     }
                 }
-
                 System.out.println("El coche con más km es:" + empresa.get(indiceMasKm).toString());
+                */
+                System.out.println(empresa.get(empresa.size()-1));
+
                 break;
-            case 6:
+            case 7:
                 Collections.sort(empresa);
                 System.out.println(empresa);
                 break;
@@ -61,7 +72,7 @@ public class Main {
                 [4] Mostrar Coches de una Marca
                 [5] Mostrar Coches menores de Kilometraje(insertar)
                 [6] Coche con mayor Kilometraje
-                [7] Coches Ordenados (kilometraje < a >)
+                [7] Coches Ordenados (kilometraje descendene))
                 [0] Salir
                 """);
     }
