@@ -19,7 +19,7 @@ public class Palabras {
         int contador=0;
         for (String a: miau.lista) {
             for(int i=0;i<a.length();i++){
-                if (a.charAt(i)==miau.letra) contador++;
+                if (a.charAt(i)==miau.letra)  contador++;
             }
         }
         System.out.println("El número de veces que aparece "+ miau.letra+"en el array de palabras es: "+contador);
