@@ -1,7 +1,4 @@
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.Map;
-import java.util.Scanner;
+import java.util.*;
 
 public class Main {
     public static Scanner scr = new Scanner(System.in).useDelimiter("\\n");
@@ -60,7 +57,9 @@ public class Main {
                     break;
                 case 6:
                     System.out.println("Introducir letra: ");
-                    letra=scr.next().charAt(0);
+                    letra=scr.next().toLowerCase().charAt(0);
+                    //Collection<String> paises = dgt.values();  NO ES NECESARIO DECLARAR PORQUE SOLO LO USAMOS 1 EZ
+                    for (String a:dgt.values()) if (a.toLowerCase().charAt(0)==(letra)) System.out.println(a);
                     break;
             }
         }while (oopcion!=0);
