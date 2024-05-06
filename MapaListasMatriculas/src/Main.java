@@ -1,4 +1,3 @@
-import java.lang.reflect.GenericArrayType;
 import java.util.*;
 
 public class Main {
@@ -7,6 +6,7 @@ public class Main {
     public static void main(String[] args) {
         int opcion,kilometraje;
         String matricula = null,marca,modelo;
+        List<Coche> listilla;
         do {
             menu();
             opcion= scr.nextInt();
@@ -27,33 +27,49 @@ public class Main {
                 case 2:
                     System.out.println("Introducir matricula: ");
                     matricula=scr.next();
+                    /*
+                    * if(garaje.remove(matricuka
+                    * */
                     if (existeCarro(matricula)) System.out.println("Se eliminó el coche con matricula: "+garaje.remove(matricula));
                     else System.out.println("No se econtró la matricula");
                     break;
                 case 3:
+                    for (Coche a: garaje.values()){
+                        System.out.println(a);
+                    }
+                    break;
+                case 4:
                     System.out.println("Introducir marca a buscar: ");
                     marca = scr.next();
                     for (Coche a: garaje.values()){
                         if (a.getMarca().equalsIgnoreCase(marca)) System.out.println(a);
                     }
+
                     break;
-                case 4:
+                case 5:
                     System.out.println("Introducir kilometros a buscar los que tienen menos de: ");
                     kilometraje = scr.nextInt();
                     for (Coche a: garaje.values()){
                         if (a.getKilometraje() <kilometraje) System.out.println(a);
                     }
                     break;
-                case 5:
+                case 6:
+                    listilla = new ArrayList<>(garaje.values());
+                    Collections.sort(listilla);
+                    System.out.println("El coche con mayor km es: \n"+listilla.get(listilla.size()-1));
+                    /*
+                    Esta opcion es para hacerla si no se sabe ordenar
                     int kilometrajeMayor = 0;
                     for (Coche a: garaje.values()){
                         if (a.getKilometraje() > kilometrajeMayor) matricula=a.getMatricula();
                     }
-                    System.out.println("El coche con mayor km es: \n"+garaje.get(matricula));
+                    System.out.println("El coche con mayor km es: \n"+garaje.get(matricula));*/
                     break;
-                case 6:
-                    List<Coche> listilla = new ArrayList<>(garaje.values());
+                case 7:
+                    listilla = new ArrayList<>(garaje.values());
                     Collections.sort(listilla, new OrdenKmMenorMayor());
+
+                    Collections.sort(new ArrayList<>(garaje.values()), (new OrdenKmMenorMayor()));
                     for (Coche coche: listilla) {
                         System.out.println(coche);
                     }
@@ -65,6 +81,8 @@ public class Main {
 
                     System.out.println(garaje);
                     //,(new OrdenKmMenorMayor())
+                    Map<Coche,String> cochesOrdenKmDesc = new TreeMap<>(); //la clave es por lo que se ordena
+                    for (String a:garaje.keySet()) cochesOrdenKmDesc.put(garaje.get(a),a);
                     break;
             }
         }while (opcion!=0);
