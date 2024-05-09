@@ -1,0 +1,5 @@
+Error: .\nuevo\fichero.txt (El sistema no puede encontrar la ruta especificada)
+Error: .\nuevo\fichero.txt (El sistema no puede encontrar la ruta especificada)
+Thu May 09 13:43:34 CEST 2024
+Error: .\nuevo\fichero.txt (El sistema no puede encontrar la ruta especificada)
+Thu May 09 13:43:59 CEST 2024 Error: .\nuevo\fichero.txt (El sistema no puede encontrar la ruta especificada)
