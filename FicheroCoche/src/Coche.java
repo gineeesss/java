@@ -37,5 +37,8 @@ public class Coche implements Comparable<Coche>{
         else return 0;*/
         return this.kilometraje.compareTo(-o.getKilometraje());
     }
+    public String escribir(){
+        return matricula+";"+marca+";"+modelo+";"+kilometraje;
+    }
 }
 

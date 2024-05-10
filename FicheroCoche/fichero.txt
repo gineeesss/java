@@ -1,0 +1,5 @@
+1;1;1;1
+4;4;4;4
+9412GAC;GuauTruck;Dog;777
+BA 5124;MiauCar;;951
+FDP1341;Renault;Scenic;552562
