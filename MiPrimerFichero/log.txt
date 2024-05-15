@@ -1,0 +1,2 @@
+Wed May 15 12:36:18 CEST 2024ficheroUno.txt (El sistema no puede encontrar el archivo especificado)
+Wed May 15 12:36:50 CEST 2024ficheroUno.txt (El sistema no puede encontrar el archivo especificado)

@@ -1,0 +1,6 @@
+                   Linea 1 fichero uno
+                   Linea 2 fichero uno
+                   Linea 3 fichero uno
+                   Linea 4 fichero uno
+                   Linea 5 fichero uno
+                   Linea 6 fichero uno

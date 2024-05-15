@@ -1,0 +1,11 @@
+Escribe un programa que guarde en un fichero de texto el contenido
+de otros dos ficheros de texto, de tal forma que en el fichero resultante
+aparezcan las líneas de los dos ficheros mezcladas: es decir, la primera línea
+será del primer fichero, la segunda será del segundo fichero y así sucesivamente.
+Hay que tener en cuenta que los ficheros de los que se cogen las líneas pueden tener tamaños diferentes.
+
+Escribe un programa que almacene en un fichero de texto 20 valores
+enteros aleatorios no repetidos comprendidos entre 1 y 100.
+
+Escribe un programa que, a partir del fichero generado en el ejercicio anterior.
+cree otro fichero con los mismos números pero ordenados de menor a mayor.
