@@ -18,6 +18,8 @@ public class Main {
                 if (ficheroUno.hasNextLine()) fichero.println(ficheroUno.nextLine());
                 if (ficheroDos.hasNextLine()) fichero.println(ficheroDos.nextLine());
             }
+            Date fecha = new Date();
+            fichero.print(fecha);
             fichero.flush();
         }catch (IOException e){
             Date fecha = new Date();
