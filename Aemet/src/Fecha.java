@@ -6,4 +6,9 @@ public class Fecha {
         this.mes = Integer.parseInt(arrayFecha[1]);
         this.anio = Integer.parseInt(arrayFecha[2]);
     }
+
+    @Override
+    public String toString() {
+        return dia + "/" + mes + "/" + anio;
+    }
 }
