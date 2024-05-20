@@ -9,8 +9,7 @@ public class Main {
     static PrintWriter log;
     //static List<Registro> registros;
     static Map<Fecha,Registro> aemet;
-    static String linea;
-    static String[] celdas;
+
 
     static final String[] NOMBREMESES = {"Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre"};
     public static void main(String[] args) {
@@ -22,6 +21,8 @@ public class Main {
             if (ceeseuve.hasNextLine()){
                 ceeseuve.nextLine();
             }
+            String linea;
+            String[] celdas;
             while (ceeseuve.hasNextLine()) {
                 linea = ceeseuve.nextLine();
                 celdas = linea.split(";");
@@ -82,11 +83,9 @@ public class Main {
     }
     static void totalPrecipitacionMes(int mes) {
         float totalPrecipitaciones = 0;
-        int dias = 0;
         for (Registro a : aemet.values()) {
             if (a.fecha.mes == mes) {
                 totalPrecipitaciones += a.prec;
-                dias++;
             }
         }
         System.out.println("La precipitación acumulada del mes "+NOMBREMESES[mes-1]+" fueron: "+totalPrecipitaciones+"l/m2");
