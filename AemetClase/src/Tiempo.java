@@ -1,6 +1,6 @@
 public class Tiempo {
     private String fecha;
-    private float prec,tmed,tmin,tmax,velmedia,racha;
+    private Float prec,tmed,tmin,tmax,velmedia,racha;
 
     public Tiempo(String fecha, float prec, float tmed, float tmin, float tmax, float velmedia, float racha) {
         this.fecha = fecha;
@@ -16,27 +16,27 @@ public class Tiempo {
         return fecha;
     }
 
-    public float getPrec() {
-        return prec;
-    }
-
-    public float getTmed() {
+    public Float getTmed() {
         return tmed;
     }
 
-    public float getTmin() {
+    public Float getPrec() {
+        return prec;
+    }
+
+    public Float getTmin() {
         return tmin;
     }
 
-    public float getTmax() {
+    public Float getTmax() {
         return tmax;
     }
 
-    public float getVelmedia() {
+    public Float getVelmedia() {
         return velmedia;
     }
 
-    public float getRacha() {
+    public Float getRacha() {
         return racha;
     }
 }

@@ -11,10 +11,10 @@ public class Main {
         int opcion;
         try {
             log = new PrintWriter(new FileWriter("log.txt"));
-            orden = (List<Tiempo>) datos.values();
             do {
-                menu();
                 leerFichero();
+                orden = new ArrayList<>(datos.values());
+                menu();
                 opcion= scr.nextInt();
                 switch (opcion) {
                     case 1:
@@ -24,7 +24,10 @@ public class Main {
                         else System.out.println("La temperatura media del mes "+nomremes(mes)+"fue: "+temperaturamedia(mes)+" ºC");
                         break;
                     case 2:
-                        Collections.sort(orden,new OrdenTmax());
+                        orden.sort(new OrdenTmax());
+                        System.out.printf("El día más caluroso del año fue %s que hizo %.1f ºC",orden.get(orden.size()-1).getFecha(),orden.get(orden.size()-1).getTmax());
+                        orden.sort(new OrdenTmin());
+                        System.out.printf("El día más caluroso del año fue %s que hizo %.1f ºC",orden.get(0).getFecha(),orden.get(0).getTmax());
                         break;
                     case 3:
                         break;
