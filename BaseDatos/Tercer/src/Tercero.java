@@ -3,8 +3,9 @@ import java.util.Scanner;
 
 public class Tercero {
     public static Scanner scr = new Scanner(System.in);
+
     public static void main(String[] args) {
-        String url ="jdbc:mariadb://192.168.56.102:3306/jardineria?user=alumno&password=alumno";
+        String url = "jdbc:mariadb://192.168.56.102:3306/jardineria?user=alumno&password=alumno";
         try {
             int filas;
             String sql;
@@ -21,14 +22,13 @@ public class Tercero {
             System.out.println("Han sido afectadas: "+filas+" filas en el update.");*/
 
 
-            sql="update Prueba set nombre='CJ' where nombre=?";
+            sql = "update Prueba set nombre='CJ' where nombre=?";
             PreparedStatement sentenciaDos = conextion.prepareStatement(sql);
             String entrada;
             entrada = scr.nextLine();
-            sentenciaDos.setString(1,entrada);
+            sentenciaDos.setString(1, entrada);
             filas = sentenciaDos.executeUpdate();
-            System.out.println("Han sido afectadas: "+filas+" filas en el update.");
-
+            System.out.println("Han sido afectadas: " + filas + " filas en el update.");
 
 
         } catch (SQLException e) {
