@@ -9,10 +9,10 @@ public class Main {
         String sql = "select p.CodigoCliente, sum(d.Cantidad * d.PrecioUnidad) from DetallePedidos d NATURAL JOIN Pedidos p group by p.CodigoCliente";
         Connection conexion = null;
         Statement st= null;
+        ResultSet rs = null;
         try{
             conexion = DriverManager.getConnection("jdbc:mariadb://192.168.56.102:3306/jardineria?user=alumno&password=alumno");
             st  = conexion.createStatement();
-            ResultSet rs = null;
             rs = st.executeQuery(sql);
             pagos = new HashMap<>();
             /**
