@@ -1,11 +1,13 @@
 import java.sql.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public abstract class GestionBBDD {
-    static Statement st;
-    static PreparedStatement prepst;
-    static Connection conexion;
-    static String sql;
-    static ResultSet rs;
+    private static Statement st;
+    private static PreparedStatement prepst;
+    private static Connection conexion;
+    private static String sql;
+    private static ResultSet rs;
 
     static void abrirConexion(){
         try {
@@ -36,8 +38,21 @@ public abstract class GestionBBDD {
     }
     static void grabarDatos(){
         GestionFichero.leerFichero();
-        GestionFichero.aver();
         try{
+            List<String[]> lista = new ArrayList<>(GestionFichero.datos.values());
+            for (String[] a: lista) {
+                sql="insert into badajoz2023 values (?,?,?,?,?,?,?)";
+                prepst = conexion.prepareStatement(sql);
+                prepst.setString(1,a[0]);
+                prepst.setFloat(2,Float.parseFloat(a[1]));
+                prepst.setFloat(3,Float.parseFloat(a[2]));
+                prepst.setFloat(4,Float.parseFloat(a[3]));
+                prepst.setFloat(5,Float.parseFloat(a[4]));
+                prepst.setFloat(6,Float.parseFloat(a[5]));
+                prepst.setFloat(7,Float.parseFloat(a[6]));
+                prepst.executeUpdate();
+            }
+            /*
             String[] linea;
             for (String a:GestionFichero.datos.keySet()) {
                 linea = GestionFichero.datos.get(a);
@@ -51,26 +66,47 @@ public abstract class GestionBBDD {
                 prepst.setFloat(6,Float.parseFloat(linea[5]));
                 prepst.setFloat(7,Float.parseFloat(linea[6]));
                 prepst.executeUpdate();
-            }
+            }*/
         }catch (SQLException e){
             System.out.println(e.getMessage());
         }
     }
     static void diaFrio(){
         try {
-            sql="select fecha from badajoz2023 order by tmin ASC limit 1";
+            sql="select fecha,tmin from badajoz2023 order by tmin ASC limit 1";
             rs= st.executeQuery(sql);
-            System.out.println(rs.getString(1));
+            if (rs.next()) {
+                System.out.println(rs.getString(1)+" "+rs.getFloat(2)+"ºC");
+            }
+            sql="select fecha,tmax from badajoz2023 order by tmax DESC limit 1";
+            rs= st.executeQuery(sql);
+            if (rs.next()) {
+                System.out.println(rs.getString(1)+" "+rs.getFloat(2)+"ºC");
+            }
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
     }
     static void diaLluviosox(){
-        sql="select fecha from badajoz2023 order by prec DESC limit 1";
-
+        try {
+            sql="select fecha, prec from badajoz2023 order by prec DESC limit 1";
+            rs= st.executeQuery(sql);
+            if (rs.next()) {
+                System.out.println(rs.getString(1)+" "+rs.getFloat(2));
+            }
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
     }
     static void diaVentoso(){
-        sql="select fecha from badajoz2023 order by racha DESC limit 1";
-
+        try {
+            sql="select fecha, racha from badajoz2023 order by racha DESC limit 1";
+            rs= st.executeQuery(sql);
+            if (rs.next()) {
+                System.out.printf("%s %.2f m/s",rs.getString(1),(rs.getFloat(2)*3.6));
+            }
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
     }
 }

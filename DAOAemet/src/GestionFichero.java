@@ -19,10 +19,9 @@ public abstract class GestionFichero {
             }
         } catch (FileNotFoundException e) {
             throw new RuntimeException(e);
+        }finally {
+            if (fichero!=null) fichero.close();
         }
         return datos;
-    }
-    public static void aver(){
-        System.out.println(datos);
     }
 }
